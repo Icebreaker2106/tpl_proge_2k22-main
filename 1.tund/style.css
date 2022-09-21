@@ -3,7 +3,6 @@ body {
 }
 
 .taust {
-    padding: 0 15px;
     box-sizing: border-box;
     background-color:#269;
     background-image: linear-gradient(white 2px, transparent 2px),
@@ -15,14 +14,15 @@ body {
 }
 
 .header {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    height: 80px ;
+    position: absolute;
+    top: 20px;
     box-sizing: border-box;
     text-align: center;
     padding: 1px 0;
-    width: 100%;
+    width: 95%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     font-family: "Lucida Console",monospace ;
     border-radius: 25px; 
     border: 2px transparent;
@@ -72,7 +72,8 @@ h1 {
 .soundcloud {
     display: inline-block;
     text-align: center;
-    margin: 40px
+    margin: 40px;
+   
 }
 
 .nupud {
@@ -84,6 +85,7 @@ h1 {
     display: inline-block;
     text-align: center;
     margin: 40px;
+   
 }
 
 .tate1 {
@@ -97,6 +99,7 @@ h1 {
     display: inline-block;
     text-align: center;
     margin: 40px;
+    
 }
 
 .ferrari {
@@ -111,7 +114,7 @@ footer {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    height: 130px ;
+    height: 160px ;
     text-align: center;
     padding: 1px 0;
     width: 100%;
@@ -132,4 +135,20 @@ footer {
     display: inline-block;
     text-align: center;
     margin: 10px;
+}
+
+
+
+
+
+
+/* test.html*/
+
+.test_taust {
+    box-sizing: border-box;    
+    background-color: #092469;
+}
+
+.playground {
+    text-align: center;
 }
