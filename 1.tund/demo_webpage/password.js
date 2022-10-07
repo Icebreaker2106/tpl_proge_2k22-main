@@ -1,10 +1,14 @@
-/*ka ei tööta
-function done() {
-    document.getElementById("popup").style.display = "none";
-    var password = document.getElementById("pass").value;
-};
+function passwordCheck() {
+    var password = "Password123";
+    
+    var userInput = window.prompt("Please enter password!");
 
-function showPopup() {
-    document.getElementById("popup").style.display = "block";
+    if (userInput == password) {
+        alert("Good job man you cracked the password!");
+        window.location.href = "test.html";
+    
+    } else {
+        alert("No way you're getting in bro");
+    }
+
 }
-*/
