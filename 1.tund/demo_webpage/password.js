@@ -1,9 +1,9 @@
 function passwordCheck() {
     var password = "Password123";
     
-    var userInput = window.prompt("Please enter password!");
+    var inputVal = document.getElementById("psw").value;
 
-    if (userInput == password) {
+    if (inputVal == password) {
         alert("Good job man you cracked the password!");
         window.location.href = "test.html";
     

@@ -20,7 +20,7 @@
                 <header>
                     <h1>Ankara Messi Tutorial</h1>
                     <nav class="site-navigation">
-                        <ul>
+                        <ul class="ul-sitenav">
                             <li><a href="#">Projects</a></li>
                             <li><a href="about.html">About me</a></li>
                         </ul>
@@ -91,12 +91,27 @@
         </div>
         
         
-        <div id="popup">    
-            <div>Enter Password:</div>
-            <input id="pass" type="password"/>
-            <button onclick="done()">Done</button>    
+        <a onclick="openForm()" class="open-button">Secret entrance</a>
+
+        <div class="form-popup" id="myForm">
+          <form onclick="passwordCheck()" class="form-container">        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+        
+            <button type="submit" onclick="passwordCheck()" value="Submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
         </div>
-        <button onclick="passwordCheck()">Show Popup</button>
+
+        <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        </script>
 
     </footer>
 
