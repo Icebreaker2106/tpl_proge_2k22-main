@@ -138,7 +138,6 @@ h1 {
   .ul-sitenav li{
     list-style:none;
     margin:0 20px;
-    transition:0.5s;
   }
   
   .ul-sitenav li a{
@@ -262,7 +261,7 @@ footer a {
 
 .div-back-button {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
@@ -345,54 +344,139 @@ footer a {
     
   }
   
-  .form-popup {
-    display: none;
-    position: sticky;
-    top: 100vh;
-    text-align: center;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
-  
-  /* Add styles to the form container */
-  .form-container {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-  }
-  
-  /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
-    background-color: #04AA6D;
+.form-popup {
+  display: none;
+  position: sticky;
+  top: 100vh;
+  text-align: center;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+  border-radius: 25px;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.site-container-projects {
+  width: 100%;    
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #f3ca20;
+  opacity: 0.8;
+  background: radial-gradient(circle, transparent 20%, #f3ca20 20%, #f3ca20 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #f3ca20 20%, #f3ca20 80%, transparent 80%, transparent) 52.5px 52.5px, linear-gradient(#000000 4.2px, transparent 4.2px) 0 -2.1px, linear-gradient(90deg, #000000 4.2px, #f3ca20 4.2px) -2.1px 0;
+  background-size: 105px 105px, 105px 105px, 52.5px 52.5px, 52.5px 52.5px;
+}
+.site-title-projects {
+  font-family: "Silkscreen";
+  font-size: 60px;
+  color: #de5499; 
+}
+
+.content-projects {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.smoking-calculator {
+    padding: 5px;
+    background-color: #000000;
     color: white;
-    padding: 16px 20px;
     border-radius: 25px;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-  }
-  
-  .form-container .cancel {
+    box-shadow: 7px 10px 10px rgb(46, 43, 43);
+}
+
+.div-smoking-button {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.text-smoking {
+    font-family: "Staatliches";
+    font-size: 20px;
+    padding: 0 5px;
+    margin: 10px;
+}
+
+.smoking-button {
     background-color: red;
-    border-radius: 25px;
+    font-family: "Staatliches";
+    border-radius: 15px;
+    height: 40px;
+    width: 110px;
+    margin-bottom: 3px;
+    border: red;
+    border-color: red;
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.smoking-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
   }
   
-  .form-container .btn:hover, .open-button:hover {
+  .smoking-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .smoking-button:hover span {
+    padding-right: 25px;
+  }
+  
+  .smoking-button:hover span:after {
     opacity: 1;
+    right: 0;
   }
